@@ -28,11 +28,7 @@ const Profil = () => {
     // Update the document title using the browser API
     document.title = "Profil";
     console.log("call");
-    if (!currentUser || !localStorage.getItem("user")) {
-      navigate("/connexion");
-    } else {
-      loadUser();
-    }
+    loadUser();
   }, [localStorage, currentUser]);
 
   const loadUser = (e) => {
@@ -56,6 +52,7 @@ const Profil = () => {
         setPseudo(arrayFromUser[1]);
         setEmail(arrayFromUser[2]);
         setAvatarSource(arrayFromUser[4]);
+        console.log(avatarSource);
         setPassword("");
       },
       (error) => {

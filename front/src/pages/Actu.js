@@ -1,17 +1,19 @@
-import React, { useContext, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 //import { Link, useLocation, useNavigate } from "react-router-dom";
 import UserContext from "../contextes/UserContext";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import postService from "../services/PostService";
 
 const Actu = () => {
   const { user } = useContext(UserContext);
   const { state } = useLocation();
+  const [allPosts, setAllPosts] = useState();
   const { currentUser } = useContext(UserContext);
-  //let navigate = useNavigate();
+  let navigate = useNavigate();
 
-  /*useEffect(() => {
+  useEffect(() => {
     // Update the document title using the browser API
     document.title = "actus";
     //console.log(currentUser)
@@ -22,15 +24,16 @@ const Actu = () => {
     }
     //get all posts on init
 
-    /*postService
+    postService
       .getAllPosts(currentUser.token)
       .then((posts) => {
         console.log(posts);
         //set all posts
         setAllPosts(posts.data);
+        console.log(allPosts);
       })
       .catch((error) => console.log(error.message));
-  }, [localStorage, useNavigate]);*/
+  }, [localStorage, useNavigate]);
 
   return (
     <div>

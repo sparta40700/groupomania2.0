@@ -1,17 +1,23 @@
-const postModel = require("../models/post.model");
-const userModel = require("../models/user.model");
+const db = require("../models/index");
+const postModel = db.Post;
+const userModel = db.User;
+const Sequelize = require("sequelize");
 const ObjectId = require("mongodb").ObjectId;
 const fileSystem = require("fs");
 const { promisify } = require("util");
 const pipeline = promisify(require("stream").pipeline);
 
-module.exports.readPosts = (req, res) => {
+module.exports.getAllPosts = (req, res) => {
   postModel
-    .find((err, docs) => {
-      if (!error) res.send(docs);
-      else console.log("error to get data" + error);
+    .findAll({
+      order: Sequelize.literal("createdAt DESC"),
     })
-    .sort({ createdAt: -1 });
+    .then((posts) => {
+      res.status(200).json(posts);
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
 };
 
 module.exports.createPost = async (req, res) => {

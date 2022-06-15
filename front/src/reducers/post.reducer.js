@@ -1,4 +1,4 @@
-import { getPosts, GET_POSTS } from "../action/post.action";
+import { GET_POSTS } from "../action/post.actions.js";
 
 const initialState = {};
 

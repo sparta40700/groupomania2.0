@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
 import UserContext from "../contextes/UserContext";
 import AuthService from "../services/AuthService";
-import UpdateProfil from "../components/profil/UpdateProfil";
 
 const Profil = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
@@ -133,7 +132,6 @@ const Profil = () => {
   return (
     <div>
       <Header />
-      <UpdateProfil />
       <div className="container">
         <h1 className="text-center">Profil</h1>
         <hr />

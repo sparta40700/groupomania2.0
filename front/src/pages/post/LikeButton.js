@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UidContext } from "../App.Context";
 import Popup from "reactjs-popup";
-// import "reactjs-popup/dist/index.css";
+import "reactjs-popup/dist/index.css";
 import { useDispatch } from "react-redux";
 import { likePost, unlikePost } from "../../action/post.actions";
 

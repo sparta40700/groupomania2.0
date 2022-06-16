@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { dateParser, isEmpty } from "../utils";
-import FollowHandler from "../profil/FollowHandler";
+import FollowHandler from "../Profil/FollowHandler";
 import LikeButton from "./LikeButton";
 import { updatePost } from "../../action/post.actions";
 import DeleteCard from "./DeleteCard";
-import CardComments from "../post/CardComment";
+import CardComments from "./CardComments";
 
 const Card = ({ post }) => {
   const [isLoading, setIsLoading] = useState(true);

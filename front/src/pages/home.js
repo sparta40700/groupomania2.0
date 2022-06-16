@@ -1,23 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
+import { UidContext } from "../components/App.Context";
 import LeftNav from "../components/LeftNav";
-import Header from "../components/Header";
+import NewPostForm from "../pages/post/NewPostForm";
 import Thread from "../components/Thread";
-import Footer from "../components/Footer";
-//import {useNavigate} from "react-router-dom";
-
+import Log from "../components/Log/Index";
+import FriendsHint from "../components/profil/FriendsHint";
 const Home = () => {
-  useEffect(() => {
-    // Update the document title using the browser API
-    document.title = "accueil";
-  }, []);
+  const uid = useContext(UidContext);
+
   return (
     <div className="home">
       <LeftNav />
-      <Header />
       <div className="main">
+        <div className="home-header">
+          {uid ? <NewPostForm /> : <Log signin={true} signup={false} />}
+        </div>
         <Thread />
       </div>
-      <Footer />
+      <div className="right-side">
+        <div className="right-side-container">
+          <div className="wrapper">{uid && <FriendsHint />}</div>
+        </div>
+      </div>
     </div>
   );
 };

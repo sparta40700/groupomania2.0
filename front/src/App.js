@@ -6,8 +6,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Profil from "./pages/profil";
 import Actu from "./pages/Actu";
-import Inscription from "./pages/Inscription";
-import Connexion from "./pages/Connexion";
+import Inscription from "../src/components/Log/SignUpForm";
+import Connexion from "../src/components/Log/SignInForm";
 import { DataProvider } from "./contextes/UserContext";
 
 const App = () => {

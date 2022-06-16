@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addComment, getPosts } from "../../action/post.actions";
-import FollowHandler from "../profil/FollowHandler";
+import FollowHandler from "../Profil/FollowHandler";
 import { isEmpty, timestampParser } from "../utils";
-
 import EditDeleteComment from "./EditDeleteComment";
 
 const CardComments = ({ post }) => {

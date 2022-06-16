@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Card from "./post/Card";
+//import Card from "./post/Card";
 import isEmpty from "lodash";
 
 import postReducer from "../reducers/post.reducer.js";
@@ -23,7 +23,7 @@ const Thread = () => {
       <ul>
         {!isEmpty(posts[0]) &&
           posts.map((post) => {
-            return <Card post={post} key={post._id} />;
+            // return <Card post={post} key={post._id} />;
           })}
       </ul>
     </div>

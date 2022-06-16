@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { isEmpty, timestampParser } from "../utils";
+import { isEmpty, timestampParser } from "../../components/utils";
 import { NavLink } from "react-router-dom";
 import { addPost, getPosts } from "../../action/post.actions";
 

@@ -3,8 +3,8 @@ module.exports = {
   //PORT: 8889,
   PORT: 3306,
   USER: "root",
-  PASSWORD: "Dr@gon405001",
-  DB: "bdd",
+  PASSWORD: "",
+  DB: "groupomania",
   dialect: "mysql",
   pool: {
     max: 5,

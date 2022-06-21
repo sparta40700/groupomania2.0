@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `groupomania-valentin`
 --
-CREATE DATABASE IF NOT EXISTS `groupomania-valentin` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `groupomania-valentin`;
+CREATE DATABASE IF NOT EXISTS `groupomania` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `groupomania`;
 
 -- --------------------------------------------------------
 

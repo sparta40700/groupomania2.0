@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light ">
+      <nav className="navbar navbar-expand-lg navbar-light p-3 mb-2 bg-secondary text-white ">
         <div className="container">
           <Link className="navbar-brand" to="/">
             Groupomania

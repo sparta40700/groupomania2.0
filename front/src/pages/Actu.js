@@ -5,7 +5,7 @@ import PostService from "../services/PostService";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AuthService from "../services/AuthService";
-import CommentService from "../services/CommentService";
+
 import commentService from "../services/CommentService";
 
 const Actu = () => {
@@ -70,12 +70,17 @@ const Actu = () => {
       <Header />
       <div className="container mt-5 mb-5">
         <h1>Actus</h1>
-        <Link to="/post/create">Créer une nouvelle actualité</Link>
+        <Link
+          to="/post/create"
+          className="p-3 mb-2 bg-danger text-white rounded"
+        >
+          Créer une nouvelle actualité
+        </Link>
         <hr />
         <h2>Liste des dernières actualités</h2>
         {allPosts !== undefined && (
           <div className="container">
-            <div className="row">
+            <div className="row align-baseline">
               {allPosts.map((post) => (
                 <div className="col-xs-12 col-md-6 col-lg-4" key={post.id}>
                   <div className="card" style={{ width: "18rem" }}>

@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(217, 211, 211);
+  background-color: #ffd7d7;
 }
 .home {
   display: grid;
@@ -8,6 +8,10 @@ body {
   overflow: hidden;
   margin: 58px auto 50px;
   position: relative;
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media screen and(max-width: 990px) {
     grid-template-columns: 60px 1fr;

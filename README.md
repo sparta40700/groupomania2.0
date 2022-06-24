@@ -2,7 +2,7 @@
 
 À propos du projet:
 
-Le backend a été réalisé avec Nodejs/express en utilisant Mysql comme base de données et sequelize pour l'ORM.
+Le backend a été réalisé avec Nodejs/express en utilisant phpmyadmin comme base de données et sequelize pour l'ORM.
 Le frontend utilise React, Axios
 
 

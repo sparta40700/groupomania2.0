@@ -2,9 +2,8 @@
 
 À propos du projet:
 
-Le backend a été réalisé avec Nodejs/express en utilisant phpmyadmin comme base de données et sequelize pour l'ORM.
+Le backend a été réalisé avec Nodejs/express en utilisant phpmyadmin comme base de données et sequelize .
 Le frontend utilise React, Axios
-
 
 instructions:
 Ajoutez un fichier .env dans le dossier racine avec ces clés :
@@ -14,7 +13,6 @@ CLIENT_URL=http://localhost:3000
 DB_USER_PASS=sparta:dragon405001
 TOKEN_SECRET=sparta
 
-
 Backend
 Commencez par aller dans le dossier back avec 'cd back' et installez toutes les dépendances avec 'npm install'
 
@@ -23,4 +21,3 @@ Ajoutez un dossier public avec une "images" à l'intérieur dans le dossier "bac
 Vous pouvez ensuite exécuter le serveur avec 'npm start' .
 
 Si vous avez l'intention d'apporter des modifications, je vous suggère d'installer nodemon .
-

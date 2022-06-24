@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../contextes/UserContext";
+import logo from "../assets/icones/icon-white.png";
 
 export default function Header() {
   const { currentUser, setCurrentUser } = useContext(UserContext);
@@ -17,7 +18,7 @@ export default function Header() {
       <nav className="navbar navbar-expand-lg navbar-light p-3 mb-2 bg-secondary text-white ">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            Groupomania
+            <img src={logo} alt="logo" className="w-25" />
           </Link>
           <button
             className="navbar-toggler"

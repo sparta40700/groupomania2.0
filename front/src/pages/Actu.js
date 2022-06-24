@@ -22,11 +22,11 @@ const Actu = () => {
     if (!localStorage.getItem("user")) {
       navigate("/connexion");
     }
-    //console.log(currentUser.userId)
+
     AuthService.getCurrentUser(currentUser.userId, currentUser.token).then(
       (response) => {
         const arrayFromUser = Object.values(response);
-        console.log(arrayFromUser);
+
         if (arrayFromUser[7] === true) {
           setAdmin(true);
         }
@@ -42,20 +42,15 @@ const Actu = () => {
         //set all posts
         //setAllPosts(posts.data)
         for (const [index, post] of Object.entries(posts.data)) {
-          //console.log(post.id)
           await commentService
             .getNumbersOfCommentsForPost(currentUser.token, post.id)
             .then((numberOfComments) => {
-              //console.log(numberOfComments)
-              console.log("get number of comments");
               post.numberOfComments = numberOfComments.data;
             })
             .catch((error) => console.log(error.message));
-          //console.log(post.numberOfComments)
         }
-        //console.log('set all posts')
+
         await setAllPosts(posts.data);
-        //await console.log(allPosts)
       })
       .catch((error) => console.log(error.message));
   }, [useNavigate]);

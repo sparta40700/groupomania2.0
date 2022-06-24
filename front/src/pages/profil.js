@@ -42,11 +42,9 @@ const Profil = () => {
       id = Object.values(JSON.parse(userFromLocalStorage))[0];
       token = Object.values(JSON.parse(userFromLocalStorage))[1];
       setCurrentUser(JSON.parse(userFromLocalStorage));
-      //console.log(currentUser)
     } else {
       id = currentUser.userId;
       token = currentUser.token;
-      //console.log(currentUser.userId)
     }
     AuthService.getCurrentUser(id, token).then(
       (response) => {
@@ -126,7 +124,6 @@ const Profil = () => {
   };
 
   const deleteAccount = (e) => {
-    //console.log(e)
     e.preventDefault();
     AuthService.deleteUser(currentUser.userId, currentUser.token);
     navigate("/");
